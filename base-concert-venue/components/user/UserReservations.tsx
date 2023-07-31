@@ -1,5 +1,5 @@
 //@ts-ignore
-// @ts-nocheck
+//@ts-nocheck
 import { Button, Heading, List } from "@chakra-ui/react";
 import Link from "next/link";
 import useSWR from "swr";
