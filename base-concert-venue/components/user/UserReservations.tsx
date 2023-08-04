@@ -1,4 +1,4 @@
-//@ts-ignore
+// @ts-ignore
 // @ts-nocheck
 import { Button, Heading, List } from "@chakra-ui/react";
 import Link from "next/link";
