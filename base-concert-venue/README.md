@@ -17,3 +17,8 @@
 ## Running the App
 
 Run `npm run dev`. The app will be found at [http://localhost:3000]
+
+## Users of the App
+
+test@test.test / test : with existing reservations
+test2@test.com / test : without existing reservations

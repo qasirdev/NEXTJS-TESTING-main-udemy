@@ -9,3 +9,16 @@ test("Display reservations and purchase more button when reservations exist", as
   });
   expect(purchaseButton).toBeInTheDocument();
 });
+test("Displays no reservations and 'purchase' button when no reservations exist", async () => {
+  render(<UserReservations userId={0} />);
+
+  const purchaseButton = await screen.findByRole("button", {
+    name: /purchase tickets/i,
+  });
+  expect(purchaseButton).toBeInTheDocument();
+
+  const ticketsHeading = screen.queryByRole("heading", {
+    name: /your tickets/i,
+  });
+  expect(ticketsHeading).not.toBeInTheDocument();
+});
