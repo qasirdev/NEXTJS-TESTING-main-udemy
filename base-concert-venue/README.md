@@ -23,3 +23,27 @@ Run `npm run dev`. The app will be found at [http://localhost:3000]
 
 test@test.test / test : with existing reservations
 test2@test.com / test : without existing reservations
+
+## Important help - Use latest cypress version on M2 macBook
+
+Next.js v12.2 or above: wherever the course uses unstable_revalidate , you will use revalidate instead
+
+`npm install -D cypress@^9`
+`npm i -D @testing-library/cypress@8.0.7` Latest testing library is not supporting cypress 9
+`npm i -D env-cmd` Allow to specify a file for environment variable before running a command package
+`npm run dev`
+`npm run test`
+
+## Cypress help
+
+`npm run build`
+`npm run start`
+`npm run cypress`
+
+## Settingup Cypress environment variable
+
+`nano /Users/qasirmehmood/.zprofile` Open file with nano
+`export PATH=$HOME/bin:/usr/local/bin:$PATH:node_modules/.bin` add path in .zprofile
+`source ~/.zprofile`
+`which cypress` Prompt path of cypress `node_modules/.bin/cypress`
+`npm i ./node_modules/.bin/cypress install --force` Force install cypress on macBook M2, 
