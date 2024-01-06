@@ -8,6 +8,7 @@ export interface NewUser {
   address?: string;
   phone?: string;
   token?: string;
+  user?: string;
 }
 
 export interface User extends Id, NewUser {}

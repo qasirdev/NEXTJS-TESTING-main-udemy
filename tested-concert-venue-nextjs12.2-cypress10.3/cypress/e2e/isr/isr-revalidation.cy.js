@@ -14,11 +14,11 @@ it("should load refreshed page from cache after new band is added", () => {
   const band = generateNewBand(bandId);
   const secret = Cypress.env("REVALIDATION_SECRET");
 
-  cy.request("POST", `/api/bands?secret=${secret}`, { newBand: band }).then(
-    (response) => {
-      expect(response.body.revalidated).to.equal(true);
-    }
-  );
+  cy.request("POST", `/api/bands?secret=${encodeURIComponent(secret)}`, {
+    newBand: band,
+  }).then((response) => {
+    expect(response.body.revalidated).to.equal(true);
+  });
 
   // reload page; new band should appear
   cy.reload();

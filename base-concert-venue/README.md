@@ -23,3 +23,23 @@ Run `npm run dev`. The app will be found at [http://localhost:3000]
 
 test@test.test / test : with existing reservations
 test2@test.com / test : without existing reservations
+
+## Important help
+
+`npm i -D env-cmd` Allow to specify a file for environment variable before running a command package
+`npm run dev`
+`npm run test`
+
+## Cypress help
+
+`npm run build`
+`npm run start`
+`npm run cypress`
+
+## Settingup Cypress environment variable
+
+`nano /Users/qasirmehmood/.zprofile` Open file with nano
+`export PATH=$HOME/bin:/usr/local/bin:$PATH:node_modules/.bin` add path in .zprofile
+`source ~/.zprofile`
+`which cypress` Prompt path of cypress `node_modules/.bin/cypress`
+`cypress open` run cypress
